@@ -13,6 +13,7 @@
 		1786F475272BE19400021454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1786F473272BE19400021454 /* Main.storyboard */; };
 		1786F477272BE19900021454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1786F476272BE19900021454 /* Assets.xcassets */; };
 		1786F47A272BE19900021454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1786F478272BE19900021454 /* LaunchScreen.storyboard */; };
+		2FC73BCE4675BD4AD9248C88 /* Pods_ResponderChainButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AA9FF77405032D382D012E /* Pods_ResponderChainButtons.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		1786F476272BE19900021454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1786F479272BE19900021454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1786F47B272BE19900021454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F617204E7CCA2A5D73F5BC7 /* Pods-ResponderChainButtons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResponderChainButtons.release.xcconfig"; path = "Pods/Target Support Files/Pods-ResponderChainButtons/Pods-ResponderChainButtons.release.xcconfig"; sourceTree = "<group>"; };
+		68AA9FF77405032D382D012E /* Pods_ResponderChainButtons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResponderChainButtons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C041C1D3D4B1C178874FA55B /* Pods-ResponderChainButtons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResponderChainButtons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ResponderChainButtons/Pods-ResponderChainButtons.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FC73BCE4675BD4AD9248C88 /* Pods_ResponderChainButtons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08C9AE7BDB52586E5B99C71A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68AA9FF77405032D382D012E /* Pods_ResponderChainButtons.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1786F461272BE19300021454 = {
 			isa = PBXGroup;
 			children = (
 				1786F46C272BE19300021454 /* ResponderChainButtons */,
 				1786F46B272BE19300021454 /* Products */,
+				B47FA1F86DA4D7E45A49965E /* Pods */,
+				08C9AE7BDB52586E5B99C71A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,15 @@
 			path = ResponderChainButtons;
 			sourceTree = "<group>";
 		};
+		B47FA1F86DA4D7E45A49965E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C041C1D3D4B1C178874FA55B /* Pods-ResponderChainButtons.debug.xcconfig */,
+				5F617204E7CCA2A5D73F5BC7 /* Pods-ResponderChainButtons.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1786F47E272BE19900021454 /* Build configuration list for PBXNativeTarget "ResponderChainButtons" */;
 			buildPhases = (
+				17415CD4272C117000F7DE99 /* ShellScript */,
+				09C94B347596FD171A73CF74 /* [CP] Check Pods Manifest.lock */,
 				1786F466272BE19300021454 /* Sources */,
 				1786F467272BE19300021454 /* Frameworks */,
 				1786F468272BE19300021454 /* Resources */,
+				C09527F2FCE6E2AC94F2F3EC /* [CP] Embed Pods Frameworks */,
+				9CDDAF09554425E3B859ABF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +159,86 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09C94B347596FD171A73CF74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ResponderChainButtons-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17415CD4272C117000F7DE99 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		9CDDAF09554425E3B859ABF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ResponderChainButtons/Pods-ResponderChainButtons-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C09527F2FCE6E2AC94F2F3EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ResponderChainButtons/Pods-ResponderChainButtons-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1786F466272BE19300021454 /* Sources */ = {
@@ -283,6 +391,7 @@
 		};
 		1786F47F272BE19900021454 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C041C1D3D4B1C178874FA55B /* Pods-ResponderChainButtons.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +410,7 @@
 		};
 		1786F480272BE19900021454 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F617204E7CCA2A5D73F5BC7 /* Pods-ResponderChainButtons.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
