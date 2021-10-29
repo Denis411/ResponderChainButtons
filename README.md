@@ -1,5 +1,5 @@
 # ResponderChainButtons
-Adding buttons on a toolbar.
+Adding buttons to a toolbar.
 
 Tapping buttons on the top-left corner of the keyboard.
 
